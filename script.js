@@ -1,3 +1,8 @@
+var image = {
+  name: 'Kotek',
+  src: 'http://imgur.com/n8OYCzR.png'
+};
+
 var GalleryItem = React.createClass({
     propTypes: {
         image: React.PropTypes.object.isRequired,
@@ -12,5 +17,5 @@ var GalleryItem = React.createClass({
         )
     }
 });
-var element = React.createElement(GalleryItem);
+var element = React.createElement(GalleryItem, {image: image});
 ReactDOM.render(element, document.getElementById('app'));
