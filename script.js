@@ -3,26 +3,26 @@ var movies = [
         id: 1,
         title: 'Harry Potter',
         desc: 'Film o czarodzieju',
-        img: 'http://ocdn.eu/images/newsweek-web/ZTA7MDA_/f69779a00d0377e1bb97c7100ee3cd6a.jpg'
+        img_src: 'http://ocdn.eu/images/newsweek-web/ZTA7MDA_/f69779a00d0377e1bb97c7100ee3cd6a.jpg'
     
     },
     {
         id: 2,
         title: 'Król Lew',
         desc: 'Każdy zna Króla Lwa:)',
-        img: 'https://media.teleman.pl/photos/Krol-Lew-1994.jpg'
+        img_src: 'https://media.teleman.pl/photos/Krol-Lew-1994.jpg'
     },
     {
         id: 3,
         title: 'Władca Pierścieni',
         desc: 'Powieśc której akcja rozgrywa się w mitologicznym świecie Śródziemia',
-        img: 'http://1.fwcdn.pl/q/q/77.0.jpg'
+        img_src: 'http://1.fwcdn.pl/q/q/77.0.jpg'
     },
     {
         id: 4,
         title: 'Toy Story',
         desc: 'Film opowiadający o zabawkach chłopca imieniem Andy',
-        img: 'https://lumiere-a.akamaihd.net/v1/images/c3c2b4a3323c4a71929cd5fc76bcda4df7157175.jpeg?region=0%2C0%2C1024%2C320'
+        img_src: 'https://lumiere-a.akamaihd.net/v1/images/c3c2b4a3323c4a71929cd5fc76bcda4df7157175.jpeg?region=0%2C0%2C1024%2C320'
     }
          
 ];
@@ -30,7 +30,7 @@ var movies = [
 //TITLE
 var MovieTitle = React.createClass({
     propTypes: {
-        title_data: React.PropTypes.string.isRequired,
+        title_data: React.PropTypes.string.isRequired
     },
 
     render: function() {
@@ -45,10 +45,10 @@ var MovieDesc = React.createClass({
     },
     
     render: function() {
-        return React.createElement('p', {}, this.props.desc_data)
+        return React.createElement('p', {}, this.props.desc_data);
     }
                                    
-})
+});
 
 //IMAGE
 var MovieImage = React.createClass({
@@ -57,27 +57,24 @@ var MovieImage = React.createClass({
     },
     
     render: function() {
-        return React.createElement('img', {src: this.props.img_data})
+        return React.createElement('img', {src: this.props.img_data});
     }
-})
+});
 
 //MOVIE
 var Movie = React.createClass({
     propTypes: {
-        movie: React.PropTypes.object.isRequired,
+        movie: React.PropTypes.object.isRequired
     },
-    
+
     render: function() {
         return React.createElement('li', {},
-                    React.createElement(MovieTitle, {title_data: this.props.movie.title}),
-                    React.createElement('p', {}, 
-                        React.createElement(MovieDesc, {desc_data: this.props.movie.desc})),
-                    React.createElement('img', {src: this.props.movie.img_src}
-                        React.createElement(MovieImage, img_data: this.props.img))
-        ); 
+            React.createElement(MovieTitle, {title_data: this.props.movie.title}),
+            React.createElement(MovieDesc, {desc_data: this.props.movie.desc}),
+            React.createElement(MovieImage, {img_data: this.props.movie.img_src})
+        );  
     }
 });
-
 
 //MOVIES ELEMENTS
 var moviesElements = movies.map(function(movie) {
