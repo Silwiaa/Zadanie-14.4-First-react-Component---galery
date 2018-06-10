@@ -4,9 +4,23 @@ $fonts: 'Song Myung', serif;
 $dark-background: #222222;
 $font-color: #FEFEFE;
 
-body {
+div {
     font-family: $fonts;
-    max-width: 1200px;
+    max-width: 850px;
     background-color: $dark-background;
     color: $font-color;
+    text-align: center;
+    margin: 10px auto;
+    padding: 10px;
+}
+
+img {
+    width: 500px;
+    height: 300px;
+    border: 5px solid $font-color;
+    object-fit: cover;
+}
+
+li {
+    list-style: none;
 }

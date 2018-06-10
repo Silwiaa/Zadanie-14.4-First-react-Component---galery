@@ -1,9 +1,23 @@
 @import url("https://fonts.googleapis.com/css?family=Song+Myung");
-body {
+div {
   font-family: "Song Myung", serif;
-  max-width: 1200px;
+  max-width: 850px;
   background-color: #222222;
   color: #FEFEFE;
+  text-align: center;
+  margin: 10px auto;
+  padding: 10px;
+}
+
+img {
+  width: 500px;
+  height: 300px;
+  border: 5px solid #FEFEFE;
+  object-fit: cover;
+}
+
+li {
+  list-style: none;
 }
 
 /*# sourceMappingURL=style.css.map */
