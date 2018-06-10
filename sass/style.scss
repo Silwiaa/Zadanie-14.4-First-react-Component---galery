@@ -1,0 +1,12 @@
+@import url('https://fonts.googleapis.com/css?family=Song+Myung');
+
+$fonts: 'Song Myung', serif;
+$dark-background: #222222;
+$font-color: #FEFEFE;
+
+body {
+    font-family: $fonts;
+    max-width: 1200px;
+    background-color: $dark-background;
+    color: $font-color;
+}
